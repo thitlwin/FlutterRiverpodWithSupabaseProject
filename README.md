@@ -12,6 +12,7 @@ Fetch real data from Supabase and display a list of articles.
 - JSON parsing (`Map<String, dynamic>` -> model)
 - Async programming with `async/await`
 - Riverpod state management using `FutureProvider`
+- Riverpod realtime state with `StreamProvider`
 
 ## Tech stack
 
@@ -45,4 +46,10 @@ flutter run \
 - `lib/main.dart`: app start + Supabase initialization + Riverpod `ProviderScope`
 - `lib/core/config.dart`: app config from `--dart-define`
 - `lib/features/news/data`: article model + HTTP API service
-- `lib/features/news/presentation`: Riverpod providers + UI screen
+- `lib/features/news/presentation`: providers + fetch page + realtime page + tab home
+
+## Realtime demo notes
+
+- Open the `Realtime` tab in the app.
+- Keep the app running, then insert/update rows in Supabase `articles` table.
+- The list updates automatically through `StreamProvider` + Supabase Realtime.

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'features/news/presentation/news_page.dart';
+import 'features/news/presentation/news_home_page.dart';
 
 class NewsApp extends StatelessWidget {
   const NewsApp({super.key});
@@ -13,7 +13,7 @@ class NewsApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
         useMaterial3: true,
       ),
-      home: const NewsPage(),
+      home: const NewsHomePage(),
     );
   }
 }
